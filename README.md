@@ -20,13 +20,13 @@ redistributed — see *Reconstruction*.
 
 ## Columns
 
-- `uid` — sha1 of the whitespace-normalised text (join key)
+- `uid`: sha1 of the whitespace-normalised text (join key)
 - `toxicity`, `severe_toxicity`, `identity_attack`, `insult`, `profanity`,
-  `threat` — Perspective probabilities in [0, 1]
-- `lang` — language hint sent with the request
-- `query_ts` — UTC request timestamp (the de-facto model version pin)
-- `ok`, `error` — request status; failed rows have null scores
-- `detected_languages`, `http_status` — diagnostics
+  `threat`:  Perspective probabilities in [0, 1]
+- `lang`:  language hint sent with the request
+- `query_ts` : UTC request timestamp (the de-facto model version pin)
+- `ok`, `error` : request status; failed rows have null scores
+- `detected_languages`, `http_status` : status and so forth
 
 ## Reconstruction
 
@@ -39,16 +39,6 @@ To attach scores to text: download the original dataset, normalise each text
 Each text was sent to `commentanalyzer.googleapis.com/v1alpha1/comments:analyze`
 with `doNotStore: true`, requesting the six production attributes. Texts above
 Perspective's 20 kB limit were skipped.
-
-## Caveats
-
-- Perspective publishes no model-version string — **`query_ts` is the version
-  pin.**
-- **Turkish and Swahili are not supported** by Perspective's production model;
-  rows in `turkish` and the Swahili part of `kenya` mostly failed
-  (`ok = False`). See `coverage.csv`.
-- Scores reflect Perspective's contested operationalisation of "toxicity" and
-  are not ground truth.
 
 ## Citation
 
