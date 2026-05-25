@@ -6,7 +6,7 @@ the model's final state before Perspective API closes at the end of 2026.
 
 ## Contents
 
-One Parquet file per dataset under `benchmarks/` and 'hate-speech-datasets'
+One Parquet file per dataset under `benchmarks/` and 'hate-speech-datasets/'
 (rows, ok/failed counts and languages per dataset). Datasets covered:
 
 - **LLM-evaluation benchmark:** RealToxicityPrompts
