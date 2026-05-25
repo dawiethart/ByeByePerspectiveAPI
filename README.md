@@ -1,7 +1,7 @@
 # Perspective API Score Archive for Toxicity & Hate-Speech Benchmarks
 
 A dated snapshot of **Perspective API** scores for **16 publicly available
-toxicity and hate-speech datasets**, computed in **May 2026** — a record of
+toxicity and hate-speech datasets**, computed in **May 2026**. It is a record of
 the model's final state before Perspective API closes at the end of 2026.
 
 ## Contents
