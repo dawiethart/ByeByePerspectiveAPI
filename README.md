@@ -50,6 +50,21 @@ Perspective's 20 kB limit were skipped.
 - Scores reflect Perspective's contested operationalisation of "toxicity" and
   are not ground truth.
 
+## License
+
+This release is dual-licensed:
+
+- **Score snapshot** (the Parquet files): Creative Commons Attribution 4.0 International
+  (CC BY 4.0).
+- **Code** (the scoring and reconstruction scripts): MIT License, see
+  `LICENSE`.
+
+The score snapshot contains only text hashes (`uid`) and Perspective scores,
+not the underlying texts. Each **source dataset retains its own license**, set
+by its original creators, see each dataset's card for terms and citation.
+Source texts must be obtained from those original releases and are not
+redistributed here.
+
 ## Citation
 
 If you use this archive, please cite [THIS PAPER (Bye Bye Perspective API) — anonymised for review] and
