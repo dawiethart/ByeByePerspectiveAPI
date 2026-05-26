@@ -1,12 +1,12 @@
 # Perspective API Score Archive for Toxicity & Hate-Speech Benchmarks
 
 A dated snapshot of **Perspective API** scores for **16 publicly available
-toxicity and hate-speech datasets**, computed in **May 2026** — a record of
+toxicity and hate-speech datasets**, computed in **May 2026**. It is a record of
 the model's final state before Perspective API closes at the end of 2026.
 
 ## Contents
 
-One Parquet file per dataset under `by_dataset/`, plus `coverage.csv`
+One Parquet file per dataset under `benchmarks/` and 'hate-speech-datasets/'
 (rows, ok/failed counts and languages per dataset). Datasets covered:
 
 - **LLM-evaluation benchmark:** RealToxicityPrompts
@@ -20,13 +20,13 @@ redistributed — see *Reconstruction*.
 
 ## Columns
 
-- `uid` — sha1 of the whitespace-normalised text (join key)
+- `uid`: sha1 of the whitespace-normalised text (join key)
 - `toxicity`, `severe_toxicity`, `identity_attack`, `insult`, `profanity`,
-  `threat` — Perspective probabilities in [0, 1]
-- `lang` — language hint sent with the request
-- `query_ts` — UTC request timestamp (the de-facto model version pin)
-- `ok`, `error` — request status; failed rows have null scores
-- `detected_languages`, `http_status` — diagnostics
+  `threat`:  Perspective probabilities in [0, 1]
+- `lang`:  language hint sent with the request
+- `query_ts` : UTC request timestamp (the de-facto model version pin)
+- `ok`, `error` : request status; failed rows have null scores
+- `detected_languages`, `http_status` : status and so forth
 
 ## Reconstruction
 
